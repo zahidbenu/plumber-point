@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap');
+
+@config "../../tailwind.config.js";
+
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply font-roboto font-normal text-sm leading-normal text-black;
+    } 
+
+    h1, h2 {
+        @apply leading-[52px];
+    }
+
+    h3 {
+        @apply font-medium text-3xl text-[#0E0E0E] uppercase;
+    }
+
+    nav ul li a {
+        @apply font-bold text-[#222222] py-[2px] ml-[37px];
+    }
+}
+
+@layer components {
+    .btn {
+        @apply block text-base uppercase text-white p-[9px_17px_8px_17px] border border-[#DD3142] bg-[#DD3142] rounded-[35px] max-w-max hover:text-[#DD3142] hover:bg-white duration-500;
+    }
+
+    .slick-dots {
+        @apply flex justify-center -ml-[2px] mt-5;
+    }
+
+    .slick-dots li button {
+    @apply w-[6px] h-[6px] bg-white rounded-full text-transparent overflow-hidden mx-[2px] cursor-pointer outline-none;
+    }
+
+    .slick-dots li.slick-active button {
+    @apply bg-[#DD3142];
+    }
+    
+    .footer-menu li a {
+        @apply block text-xs my-[13px] duration-500 hover:text-[#DD3142];
+    }
+
+    footer .contact a {
+        @apply block duration-500 hover:text-[#DD3142];
+    }
+
+    .contact-form input, textarea {
+        @apply font-rubik text-base w-full border-b border-[#707070] py-3 mb-[35px] placeholder:text-black focus:outline-none focus:border-[#DD3142]; 
+    }
+
+    nav ul li a.active {
+        @apply border-b-2 border-[#DD3142];
+    }
+}
